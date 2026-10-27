@@ -14,6 +14,14 @@ html{scroll-padding-top:24px}h3,figure{margin:0}.brand{font-size:18px;font-weigh
 .key-chord{white-space:nowrap}
 
 /* Both languages share the layout; page URLs retain the selected language. */
+.demo-content.math-example{padding:26px 20px;font-size:13px;line-height:2;min-height:285px}
+.math-header{color:var(--blue);margin-bottom:18px}
+.calc-line{display:grid;grid-template-columns:minmax(0,1fr) max-content;gap:10px;align-items:baseline}
+.calc-line>span:first-child{min-width:0;white-space:nowrap}
+.calc-variable{color:#c7a9e8}.calc-count{color:#f0c98c}.calc-answer{color:var(--green);white-space:nowrap}
+.calc-separated{margin-top:14px;padding-top:12px;border-top:1px solid var(--line)}
+figcaption code{font:inherit;color:var(--ink)}
+@media(max-width:400px){.demo-content.math-example{font-size:12px}}
 header{display:grid;grid-template-columns:1fr auto auto}
 .language-switch{display:inline-flex;align-items:center;gap:0;flex-wrap:nowrap;border:1px solid var(--line);border-radius:8px;padding:2px}
 .language-switch a,.language-switch span{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;padding:6px 9px;font:12px/1.2 ui-monospace,SFMono-Regular,Consolas,monospace;text-decoration:none;border-radius:5px}
