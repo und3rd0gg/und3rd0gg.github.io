@@ -74,10 +74,20 @@ figcaption,.availability,.eyebrow,.platform-status,.demo-top,.demo-bottom{font-s
 }
 @media(max-width:380px){.story{grid-template-columns:1fr}.story__art{justify-content:flex-start}.story__art img{width:88px}}
 
-/* A crop of a real app screenshot, kept unaltered in the asset. */
-.app-screenshot{aspect-ratio:1.25;overflow:hidden;border:1px solid #464d54;border-radius:13px;background:#1d1e21;box-shadow:0 22px 60px #0003}
-.app-screenshot img{display:block;width:250%;height:auto;max-width:none}
 .platform-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 .platform-other{margin-top:20px;color:var(--muted);font-size:14px}
 @media(max-width:700px){.platform-grid{grid-template-columns:1fr}}
-.app-video{display:block;width:100%;aspect-ratio:1.25;object-fit:contain;border:1px solid #464d54;border-radius:13px;background:#1d1e21;box-shadow:0 22px 60px #0003}
+.demo-image{display:block;width:100%;height:auto;aspect-ratio:8/5;object-fit:contain;border:1px solid #464d54;border-radius:13px;background:#1d1e21;box-shadow:0 22px 60px #0003}
+.demo-stage{position:relative}
+.demo-hotkey-badge{position:absolute;left:12px;bottom:12px;display:flex;align-items:center;gap:5px;padding:6px 9px;border:1px solid #51575d;border-radius:8px;background:#202326e8;color:var(--ink);font-size:13px}
+.demo-hotkey-badge[hidden]{display:none}
+.demo-controls{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:14px;flex-wrap:wrap}
+.demo-controls[hidden]{display:none}
+.demo-choices{display:flex;gap:5px;flex-wrap:wrap;order:0}
+.demo-controls button{border:1px solid transparent;border-radius:7px;background:transparent;color:var(--muted);cursor:pointer;font:inherit;font-size:13px;line-height:1.4;padding:8px 10px}
+.demo-controls button:hover{color:var(--ink);border-color:var(--line)}
+.demo-controls button:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+.demo-controls button[aria-pressed="true"]{background:#30383a;border-color:#58665a;color:var(--ink)}
+.demo-controls .demo-toggle{order:1;border-color:var(--line)}
+.demo-controls .demo-resume{order:2;border-color:var(--line)}
+.demo-controls .demo-resume[hidden]{display:none}

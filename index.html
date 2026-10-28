@@ -14,12 +14,13 @@
   <meta property="og:url" content="https://und3rd0gg.github.io/">
   <meta property="og:title" content="UnderdoggNote — a scratchpad for everything in between">
   <meta property="og:description" content="Alt+A. Write it, do the math, close it. A free scratchpad for Windows.">
-  <meta property="og:image" content="https://und3rd0gg.github.io/assets/app-screenshot.png">
-  <meta property="og:image:alt" content="Screenshot of the UnderdoggNote editor with calculations and unit conversions">
+  <meta property="og:image" content="https://und3rd0gg.github.io/assets/social-preview-real.png">
+  <meta property="og:image:alt" content="UnderdoggNote, its dog mascot and a close-up of calculations in the editor">
   <meta name="twitter:card" content="summary_large_image">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; media-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; script-src 'self'; base-uri 'none'; form-action 'none'">
   <link rel="icon" href="/assets/app-icon.png">
   <link rel="stylesheet" href="/site.css">
+  <script defer src="/demo-carousel.js"></script>
 </head>
 <body>
   <a class="skip" href="#content">Skip to content</a>
@@ -42,11 +43,19 @@
           </div>
           <p class="availability">Free · No account needed for local notes.</p>
         </div>
-        <figure class="capture-preview">
-          <video class="app-video" controls muted playsinline preload="metadata" poster="/assets/demo-poster.png" aria-label="Watch a demonstration of the UnderdoggNote editor">
-            <source src="/assets/demo.webm" type="video/webm">
-          </video>
-          <figcaption>Editor demo in a test environment: enter prices, calculate a total and convert units.</figcaption>
+        <figure class="capture-preview demo-carousel" data-demo-carousel data-play-label="Play demos" data-pause-label="Pause demos" data-play-text="Play" data-pause-text="Pause">
+          <div class="demo-stage"><img class="demo-image" data-demo-image src="/assets/demo-hotkey-poster.png" width="320" height="200" alt="UnderdoggNote opens over a browser window"><span class="demo-hotkey-badge" data-demo-hotkey-badge aria-hidden="true"><kbd>Alt</kbd> + <kbd>A</kbd></span></div>
+          <div class="demo-controls" data-demo-controls hidden>
+            <button class="demo-toggle" type="button" data-demo-toggle aria-label="Pause demos">Pause</button>
+            <div class="demo-choices" role="group" aria-label="Choose a demonstration">
+              <button type="button" data-demo-choice data-duration="8000" data-animation="/assets/demo-hotkey.webp" data-poster="/assets/demo-hotkey-poster.png" data-alt="UnderdoggNote opens over a browser window" aria-pressed="true">Alt+A</button>
+              <button type="button" data-demo-choice data-duration="10375" data-animation="/assets/demo-note.webp" data-poster="/assets/demo-note-poster.png" data-alt="A note in the UnderdoggNote editor" aria-pressed="false">Note</button>
+              <button type="button" data-demo-choice data-duration="11000" data-animation="/assets/demo-math.webp" data-poster="/assets/demo-math-poster.png" data-alt="Calculations using variables in the UnderdoggNote editor" aria-pressed="false">Math</button>
+              <button type="button" data-demo-choice data-duration="9875" data-animation="/assets/demo-units.webp" data-poster="/assets/demo-units-poster.png" data-alt="Unit conversion in the UnderdoggNote editor" aria-pressed="false">Units</button>
+              <button type="button" data-demo-choice data-duration="11125" data-animation="/assets/demo-currency.webp" data-poster="/assets/demo-currency-poster.png" data-alt="Currency conversion using an illustrative rate, not a live exchange rate" aria-pressed="false">Currency</button>
+            </div>
+            <button class="demo-resume" type="button" data-demo-resume hidden>Resume rotation</button>
+          </div>
         </figure>
       </section>
 
@@ -77,7 +86,7 @@
         <div class="section-heading"><h2 id="compare-title">How it compares</h2><p>Scratchpads and knowledge bases serve different jobs.</p></div>
         <div class="compare-scroll" role="region" aria-label="App comparison" tabindex="0"><table class="compare-table">
           <thead><tr><th scope="col">Feature</th><th scope="col">UnderdoggNote</th><th scope="col"><a href="https://antinote.io/">Antinote</a></th><th scope="col"><a href="https://keep.google.com/">Google Keep</a></th><th scope="col"><a href="https://obsidian.md/">Obsidian</a></th></tr></thead>
-          <tbody><tr><th scope="row">Best for</th><td>Scratch notes and calculations</td><td>Quick notes</td><td>Notes and lists</td><td>A knowledge base</td></tr><tr><th scope="row">Available on</th><td>Windows; Android in testing</td><td>macOS</td><td>Android, iPhone, web</td><td>Windows, macOS, Linux, Android, iPhone</td></tr><tr><th scope="row">App price</th><td>Free</td><td>$5 one-time</td><td>Free</td><td>Free; Sync paid separately</td></tr><tr><th scope="row">Sync</th><td>Google Drive; Android in testing; no end-to-end encryption</td><td>iCloud on Apple devices; encrypted on device</td><td>Google account</td><td>Obsidian Sync or other options</td></tr></tbody>
+          <tbody><tr><th scope="row">Best for</th><td>Scratch notes and calculations</td><td>Quick notes</td><td>Notes and lists</td><td>A knowledge base</td></tr><tr><th scope="row">Available on</th><td>Windows; Android in testing</td><td>macOS</td><td>Android, iPhone, web</td><td>Windows, macOS, Linux, Android, iPhone</td></tr><tr><th scope="row">Calculations in notes</th><td>Yes</td><td>Yes</td><td>No built-in calculator</td><td><a href="https://community.obsidian.md/plugins/numerals">Via plugins</a></td></tr><tr><th scope="row">App price</th><td>Free</td><td>$5 one-time</td><td>Free</td><td>Free; Sync paid separately</td></tr><tr><th scope="row">Sync</th><td>Google Drive; no end-to-end encryption</td><td>iCloud on Apple devices; encrypted on device</td><td>Google account</td><td>Obsidian Sync or other options</td></tr></tbody>
         </table></div>
       </section>
 
