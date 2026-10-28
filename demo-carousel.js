@@ -61,8 +61,13 @@
 
   // A pointer can focus the control before its click; remember the prior intent.
   carousel.addEventListener('pointerdown', () => { pointerWasPlaying = playing; });
-  carousel.addEventListener('pointercancel', () => { pointerWasPlaying = null; });
+  window.addEventListener('pointercancel', () => { pointerWasPlaying = null; });
+  window.addEventListener('pointerup', () => {
+    // A click follows pointerup; clear abandoned pointer state after that event.
+    window.setTimeout(() => { pointerWasPlaying = null; }, 0);
+  });
   carousel.addEventListener('focusin', (event) => {
+    if (pointerWasPlaying !== null) return;
     if (!carousel.contains(event.relatedTarget)) {
       autoPausedByFocus = playing;
       playing = false;
@@ -102,5 +107,6 @@
   });
   document.addEventListener('visibilitychange', render);
   controls.hidden = false;
+  toggle.hidden = false;
   render();
 })();

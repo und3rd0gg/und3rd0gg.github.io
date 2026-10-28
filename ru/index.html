@@ -19,8 +19,8 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; script-src 'self'; base-uri 'none'; form-action 'none'">
   <link rel="icon" href="/assets/app-icon.png">
-  <link rel="stylesheet" href="/site.css">
-  <script defer src="/demo-carousel.js"></script>
+  <link rel="stylesheet" href="/site.css?v=20261028b">
+  <script defer src="/demo-carousel.js?v=20261028b"></script>
 </head>
 <body>
   <a class="skip" href="#content">Перейти к содержимому</a>
@@ -43,18 +43,17 @@
           </div>
           <p class="availability">Бесплатно · Для локальных заметок аккаунт не нужен.</p>
         </div>
-        <figure class="capture-preview demo-carousel" data-demo-carousel data-play-label="Запустить демонстрации" data-pause-label="Приостановить демонстрации" data-play-text="Запустить" data-pause-text="Пауза">
-          <div class="demo-stage"><img class="demo-image" data-demo-image src="/assets/demo-hotkey-poster.png" width="320" height="200" alt="UnderdoggNote открывается поверх окна браузера"><span class="demo-hotkey-badge" data-demo-hotkey-badge aria-hidden="true"><kbd>Alt</kbd> + <kbd>A</kbd></span></div>
+        <figure class="capture-preview demo-carousel" data-demo-carousel data-play-label="Запустить демонстрации" data-pause-label="Приостановить демонстрации" data-play-text="▶" data-pause-text="❚❚">
+          <div class="demo-stage"><img class="demo-image" data-demo-image src="/assets/demo-hotkey-poster.png?v=20261028b" width="320" height="200" alt="UnderdoggNote открывается поверх окна браузера"><span class="demo-hotkey-badge" data-demo-hotkey-badge aria-hidden="true"><kbd>Alt</kbd> + <kbd>A</kbd></span><button class="demo-toggle" type="button" data-demo-toggle aria-label="Приостановить демонстрации" hidden>❚❚</button></div>
           <div class="demo-controls" data-demo-controls hidden>
-            <button class="demo-toggle" type="button" data-demo-toggle aria-label="Приостановить демонстрации">Пауза</button>
             <div class="demo-choices" role="group" aria-label="Выберите демонстрацию">
-              <button type="button" data-demo-choice data-duration="8000" data-animation="/assets/demo-hotkey.webp" data-poster="/assets/demo-hotkey-poster.png" data-alt="UnderdoggNote открывается поверх окна браузера" aria-pressed="true">Alt+A</button>
-              <button type="button" data-demo-choice data-duration="10375" data-animation="/assets/demo-note.webp" data-poster="/assets/demo-note-poster.png" data-alt="Заметка в редакторе UnderdoggNote" aria-pressed="false">Заметка</button>
-              <button type="button" data-demo-choice data-duration="11000" data-animation="/assets/demo-math.webp" data-poster="/assets/demo-math-poster.png" data-alt="Расчёт с переменными в редакторе UnderdoggNote" aria-pressed="false">Расчёты</button>
-              <button type="button" data-demo-choice data-duration="9875" data-animation="/assets/demo-units.webp" data-poster="/assets/demo-units-poster.png" data-alt="Перевод единиц в редакторе UnderdoggNote" aria-pressed="false">Единицы</button>
-              <button type="button" data-demo-choice data-duration="11125" data-animation="/assets/demo-currency.webp" data-poster="/assets/demo-currency-poster.png" data-alt="Перевод валют по условному курсу, а не по текущему курсу" aria-pressed="false">Валюты</button>
+              <button type="button" data-demo-choice data-duration="11000" data-animation="/assets/demo-hotkey.webp?v=20261028b" data-poster="/assets/demo-hotkey-poster.png?v=20261028b" data-alt="UnderdoggNote открывается поверх окна браузера" aria-pressed="true">Alt+A</button>
+              <button type="button" data-demo-choice data-duration="9500" data-animation="/assets/demo-note.webp?v=20261028b" data-poster="/assets/demo-note-poster.png?v=20261028b" data-alt="Заметка в редакторе UnderdoggNote" aria-pressed="false">Заметка</button>
+              <button type="button" data-demo-choice data-duration="9875" data-animation="/assets/demo-math.webp?v=20261028b" data-poster="/assets/demo-math-poster.png?v=20261028b" data-alt="Расчёт с переменными в редакторе UnderdoggNote" aria-pressed="false">Расчёты</button>
+              <button type="button" data-demo-choice data-duration="9000" data-animation="/assets/demo-units.webp?v=20261028b" data-poster="/assets/demo-units-poster.png?v=20261028b" data-alt="Перевод единиц в редакторе UnderdoggNote" aria-pressed="false">Единицы</button>
+              <button type="button" data-demo-choice data-duration="7125" data-animation="/assets/demo-currency.webp?v=20261028b" data-poster="/assets/demo-currency-poster.png?v=20261028b" data-alt="Конвертация валют в редакторе" aria-pressed="false">Валюты</button>
+              <button class="demo-resume" type="button" data-demo-resume hidden>Возобновить смену</button>
             </div>
-            <button class="demo-resume" type="button" data-demo-resume hidden>Возобновить смену</button>
           </div>
         </figure>
       </section>

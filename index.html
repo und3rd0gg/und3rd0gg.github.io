@@ -19,8 +19,8 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; script-src 'self'; base-uri 'none'; form-action 'none'">
   <link rel="icon" href="/assets/app-icon.png">
-  <link rel="stylesheet" href="/site.css">
-  <script defer src="/demo-carousel.js"></script>
+  <link rel="stylesheet" href="/site.css?v=20261028b">
+  <script defer src="/demo-carousel.js?v=20261028b"></script>
 </head>
 <body>
   <a class="skip" href="#content">Skip to content</a>
@@ -43,18 +43,17 @@
           </div>
           <p class="availability">Free · No account needed for local notes.</p>
         </div>
-        <figure class="capture-preview demo-carousel" data-demo-carousel data-play-label="Play demos" data-pause-label="Pause demos" data-play-text="Play" data-pause-text="Pause">
-          <div class="demo-stage"><img class="demo-image" data-demo-image src="/assets/demo-hotkey-poster.png" width="320" height="200" alt="UnderdoggNote opens over a browser window"><span class="demo-hotkey-badge" data-demo-hotkey-badge aria-hidden="true"><kbd>Alt</kbd> + <kbd>A</kbd></span></div>
+        <figure class="capture-preview demo-carousel" data-demo-carousel data-play-label="Play demos" data-pause-label="Pause demos" data-play-text="▶" data-pause-text="❚❚">
+          <div class="demo-stage"><img class="demo-image" data-demo-image src="/assets/demo-hotkey-poster.png?v=20261028b" width="320" height="200" alt="UnderdoggNote opens over a browser window"><span class="demo-hotkey-badge" data-demo-hotkey-badge aria-hidden="true"><kbd>Alt</kbd> + <kbd>A</kbd></span><button class="demo-toggle" type="button" data-demo-toggle aria-label="Pause demos" hidden>❚❚</button></div>
           <div class="demo-controls" data-demo-controls hidden>
-            <button class="demo-toggle" type="button" data-demo-toggle aria-label="Pause demos">Pause</button>
             <div class="demo-choices" role="group" aria-label="Choose a demonstration">
-              <button type="button" data-demo-choice data-duration="8000" data-animation="/assets/demo-hotkey.webp" data-poster="/assets/demo-hotkey-poster.png" data-alt="UnderdoggNote opens over a browser window" aria-pressed="true">Alt+A</button>
-              <button type="button" data-demo-choice data-duration="10375" data-animation="/assets/demo-note.webp" data-poster="/assets/demo-note-poster.png" data-alt="A note in the UnderdoggNote editor" aria-pressed="false">Note</button>
-              <button type="button" data-demo-choice data-duration="11000" data-animation="/assets/demo-math.webp" data-poster="/assets/demo-math-poster.png" data-alt="Calculations using variables in the UnderdoggNote editor" aria-pressed="false">Math</button>
-              <button type="button" data-demo-choice data-duration="9875" data-animation="/assets/demo-units.webp" data-poster="/assets/demo-units-poster.png" data-alt="Unit conversion in the UnderdoggNote editor" aria-pressed="false">Units</button>
-              <button type="button" data-demo-choice data-duration="11125" data-animation="/assets/demo-currency.webp" data-poster="/assets/demo-currency-poster.png" data-alt="Currency conversion using an illustrative rate, not a live exchange rate" aria-pressed="false">Currency</button>
+              <button type="button" data-demo-choice data-duration="11000" data-animation="/assets/demo-hotkey.webp?v=20261028b" data-poster="/assets/demo-hotkey-poster.png?v=20261028b" data-alt="UnderdoggNote opens over a browser window" aria-pressed="true">Alt+A</button>
+              <button type="button" data-demo-choice data-duration="9500" data-animation="/assets/demo-note.webp?v=20261028b" data-poster="/assets/demo-note-poster.png?v=20261028b" data-alt="A note in the UnderdoggNote editor" aria-pressed="false">Note</button>
+              <button type="button" data-demo-choice data-duration="9875" data-animation="/assets/demo-math.webp?v=20261028b" data-poster="/assets/demo-math-poster.png?v=20261028b" data-alt="Calculations using variables in the UnderdoggNote editor" aria-pressed="false">Math</button>
+              <button type="button" data-demo-choice data-duration="9000" data-animation="/assets/demo-units.webp?v=20261028b" data-poster="/assets/demo-units-poster.png?v=20261028b" data-alt="Unit conversion in the UnderdoggNote editor" aria-pressed="false">Units</button>
+              <button type="button" data-demo-choice data-duration="7125" data-animation="/assets/demo-currency.webp?v=20261028b" data-poster="/assets/demo-currency-poster.png?v=20261028b" data-alt="Currency conversion in the editor" aria-pressed="false">Currency</button>
+              <button class="demo-resume" type="button" data-demo-resume hidden>Resume rotation</button>
             </div>
-            <button class="demo-resume" type="button" data-demo-resume hidden>Resume rotation</button>
           </div>
         </figure>
       </section>
