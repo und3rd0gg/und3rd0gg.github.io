@@ -17,7 +17,7 @@
   <meta property="og:image" content="https://und3rd0gg.github.io/assets/app-screenshot.png">
   <meta property="og:image:alt" content="Screenshot of the UnderdoggNote editor with calculations and unit conversions">
   <meta name="twitter:card" content="summary_large_image">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; media-src 'self'; base-uri 'none'; form-action 'none'">
   <link rel="icon" href="/assets/app-icon.png">
   <link rel="stylesheet" href="/site.css">
 </head>
@@ -43,8 +43,10 @@
           <p class="availability">Free · No account needed for local notes.</p>
         </div>
         <figure class="capture-preview">
-          <div class="app-screenshot"><img src="/assets/app-screenshot.png" width="1366" height="768" alt="UnderdoggNote math mode showing calculations and unit conversions"></div>
-          <figcaption>UnderdoggNote for Windows: calculations and unit conversions in a note.</figcaption>
+          <video class="app-video" controls muted playsinline preload="metadata" poster="/assets/demo-poster.png" aria-label="Watch a demonstration of the UnderdoggNote editor">
+            <source src="/assets/demo.webm" type="video/webm">
+          </video>
+          <figcaption>Editor demo in a test environment: enter prices, calculate a total and convert units.</figcaption>
         </figure>
       </section>
 

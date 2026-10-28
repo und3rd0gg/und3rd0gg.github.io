@@ -17,7 +17,7 @@
   <meta property="og:image" content="https://und3rd0gg.github.io/assets/app-screenshot.png">
   <meta property="og:image:alt" content="Снимок редактора UnderdoggNote с расчётами и переводом единиц">
   <meta name="twitter:card" content="summary_large_image">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; media-src 'self'; base-uri 'none'; form-action 'none'">
   <link rel="icon" href="/assets/app-icon.png">
   <link rel="stylesheet" href="/site.css">
 </head>
@@ -43,8 +43,10 @@
           <p class="availability">Бесплатно · Для локальных заметок аккаунт не нужен.</p>
         </div>
         <figure class="capture-preview">
-          <div class="app-screenshot"><img src="/assets/app-screenshot.png" width="1366" height="768" alt="Режим math в UnderdoggNote: расчёты и перевод единиц"></div>
-          <figcaption>UnderdoggNote для Windows: расчёты и перевод единиц в заметке.</figcaption>
+          <video class="app-video" controls muted playsinline preload="metadata" poster="/assets/demo-poster.png" aria-label="Посмотреть демонстрацию редактора UnderdoggNote">
+            <source src="/assets/demo.webm" type="video/webm">
+          </video>
+          <figcaption>Демонстрация редактора в тестовом окружении: ввод данных, расчёт суммы и перевод единиц.</figcaption>
         </figure>
       </section>
 

@@ -80,3 +80,4 @@ figcaption,.availability,.eyebrow,.platform-status,.demo-top,.demo-bottom{font-s
 .platform-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 .platform-other{margin-top:20px;color:var(--muted);font-size:14px}
 @media(max-width:700px){.platform-grid{grid-template-columns:1fr}}
+.app-video{display:block;width:100%;aspect-ratio:1.25;object-fit:contain;border:1px solid #464d54;border-radius:13px;background:#1d1e21;box-shadow:0 22px 60px #0003}
