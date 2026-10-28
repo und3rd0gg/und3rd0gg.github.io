@@ -38,3 +38,38 @@ header{display:grid;grid-template-columns:1fr auto auto}
   .language-switch a,.language-switch span{min-width:44px;min-height:44px;padding:6px 7px}
   .hero h1:lang(ru){font-size:clamp(32px,8vw,48px)}
 }
+
+/* Feature stories and comparisons use the same layout in both languages. */
+.hero-sublead{max-width:52ch;color:var(--muted);font-size:16px;line-height:1.75;margin-top:16px}
+.story{display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:48px;align-items:center;padding:48px 0 58px;border-top:1px solid var(--line)}
+.story__copy{max-width:65ch}.story__copy h2{font-size:clamp(27px,3vw,34px)}
+.story__copy p{color:var(--muted);font-size:15px;line-height:1.75;margin-top:16px}
+.story__art{display:flex;align-items:center;justify-content:center}.story__art img{width:min(180px,100%);height:auto;border-radius:24px}
+.feature-grid{gap:18px;padding:12px 0 72px}
+.feature-grid .feature-card{min-width:0;display:flex;flex-direction:column;padding:0;border:1px solid var(--line);border-radius:12px;background:var(--surface);overflow:hidden}
+.feature-card__visual{min-height:154px;display:flex;align-items:center;justify-content:center;padding:18px;border-bottom:1px solid var(--line);background:radial-gradient(circle,#373c42 1px,transparent 1px),#202326;background-size:20px 20px}
+.feature-snippet{width:min(100%,240px);display:flex;flex-direction:column;gap:6px;color:#c3cbd1;font:13px/1.55 ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace}
+.feature-snippet strong{color:var(--green);font-weight:600}.feature-snippet code{font:inherit;color:inherit}
+.feature-card__content{padding:22px 22px 25px}.feature-card__content h2{font-size:19px;line-height:1.35}.feature-grid .feature-card__content p{font-size:14px;line-height:1.7;margin-top:12px}
+.feature-card__content code,.faq-item code{font:0.92em ui-monospace,SFMono-Regular,Consolas,monospace;color:var(--ink)}
+.platform-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.platform-status{font-size:12px}
+.comparison,.faq{padding:44px 0 58px;border-top:1px solid var(--line)}
+.compare-scroll{width:100%;overflow-x:auto;margin-top:28px;border:1px solid var(--line);border-radius:12px}
+.compare-scroll:focus-visible{outline:2px solid var(--blue);outline-offset:4px}
+.compare-table{width:100%;min-width:790px;border-collapse:collapse;text-align:left;font-size:14px;line-height:1.55}
+.compare-table th,.compare-table td{padding:16px;vertical-align:top;border-bottom:1px solid var(--line);border-right:1px solid var(--line)}
+.compare-table tr>*:last-child{border-right:0}.compare-table tbody tr:last-child>*{border-bottom:0}
+.compare-table thead th{background:var(--surface);color:var(--ink);font-weight:600}.compare-table tbody th{width:14%;color:var(--ink);font-weight:550}.compare-table td{width:21.5%;color:var(--muted)}
+.compare-table a{color:var(--ink)}.compare-table a:hover{color:var(--blue)}
+.faq-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 48px;margin-top:25px}
+.faq-item{padding:22px 0;border-top:1px solid var(--line)}.faq-item h3{font-size:18px;line-height:1.4}.faq-item p{color:var(--muted);font-size:14px;line-height:1.75;margin-top:12px}
+figcaption,.availability,.eyebrow,.platform-status,.demo-top,.demo-bottom{font-size:13px}.demo-content:lang(ru){font-size:13px}
+.privacy-callout{border-top:1px solid var(--line);max-width:none}.privacy-callout p{max-width:65ch}
+@media(max-width:950px){.platform-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){
+  .hero-sublead{font-size:15px}.story{grid-template-columns:minmax(0,1fr) 108px;gap:20px;padding:36px 0 44px}.story__art img{width:108px;border-radius:16px}
+  .feature-grid{grid-template-columns:1fr;gap:14px;padding:0 0 45px}.feature-card__visual{min-height:132px}.feature-card__content{padding:20px}
+  .platform-grid,.faq-grid{grid-template-columns:1fr}.faq-grid{gap:0}.comparison,.faq{padding:36px 0 42px}
+  .compare-scroll{margin-top:20px}.compare-table th,.compare-table td{padding:13px}
+}
+@media(max-width:380px){.story{grid-template-columns:1fr}.story__art{justify-content:flex-start}.story__art img{width:88px}}
