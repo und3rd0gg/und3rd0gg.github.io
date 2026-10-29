@@ -5,7 +5,7 @@
   <meta name="google-site-verification" content="uG63MBSxGQwTPkxmJz1bmK2OAJdUuikm_iAh-QsIST8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>UnderdoggNote — a hotkey scratchpad for Windows</title>
-  <meta name="description" content="A Windows scratchpad for notes, calculations, optional Google Drive sync and export to Obsidian. Open it with Alt+A.">
+  <meta name="description" content="A scratchpad that pops up over any Windows app with Alt+A. It does math as you type, syncs through your own Google Drive and sends notes to Obsidian.">
   <link rel="canonical" href="https://und3rd0gg.github.io/">
   <link rel="alternate" hreflang="en" href="https://und3rd0gg.github.io/">
   <link rel="alternate" hreflang="ru" href="https://und3rd0gg.github.io/ru/">
@@ -13,13 +13,13 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://und3rd0gg.github.io/">
   <meta property="og:title" content="UnderdoggNote — a scratchpad for everything in between">
-  <meta property="og:description" content="Alt+A. Write it, do the math, close it. A free Windows scratchpad with a planned price change in November.">
+  <meta property="og:description" content="Press Alt+A and a scratchpad pops up over any app. It does math as you type.">
   <meta property="og:image" content="https://und3rd0gg.github.io/assets/social-preview-real.png">
   <meta property="og:image:alt" content="UnderdoggNote, its dog mascot and a close-up of calculations in the editor">
   <meta name="twitter:card" content="summary_large_image">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; script-src 'self'; font-src 'self'; base-uri 'none'; form-action 'none'">
   <link rel="icon" href="/assets/app-icon.png">
-  <link rel="stylesheet" href="/site.css?v=20261029a">
+  <link rel="stylesheet" href="/site.css?v=20261029b">
   <link rel="preload" href="/assets/fonts/literata-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
   <script defer src="/demo-carousel.js?v=20261029a"></script>
   <script defer src="/share-link.js?v=20261029a"></script>
@@ -36,95 +36,95 @@
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-copy">
           <h1 id="hero-title">A scratchpad for everything in between.</h1>
-          <p class="lead">For Windows. <span class="key-chord"><kbd>Alt</kbd> + <kbd>A</kbd></span> opens it over whatever you're doing: jot down a thought or work out a trip budget, then get back to work.</p>
-          <p class="hero-sublead">You can sync notes through your own Google Drive, with no app subscription.</p>
+          <p class="lead">Press <span class="key-chord"><kbd>Alt</kbd> + <kbd>A</kbd></span> in any Windows app and a scratchpad pops up. Jot down a thought, work out a trip budget, get back to work.</p>
+          <p class="hero-sublead">Sync goes through your own Google Drive. No subscription.</p>
           <div class="hero-actions">
             <button class="button button-primary send-to-pc" type="button" data-send-to-pc data-url="https://apps.microsoft.com/detail/9N2R52B29SSF" data-copied="Link copied" hidden>Send the link to my PC</button>
             <a class="button button-primary" href="https://apps.microsoft.com/detail/9N2R52B29SSF" aria-label="Get it for Windows from Microsoft Store"><span class="store-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>Get it for Windows</span><span aria-hidden="true">↗</span></a>
-            <a class="text-link" href="/support/#android-testing">Android is in testing: request access <span aria-hidden="true">→</span></a>
+            <a class="text-link" href="/support/#android-testing">The Android version is in testing. Want in? <span aria-hidden="true">→</span></a>
           </div>
-          <p class="availability">Free now in Microsoft Store. I plan to keep access and updates free for people who get it with their Microsoft account by November 11. Local notes need no app account.</p>
+          <p class="availability">Free now in Microsoft Store. I plan to keep access and updates free for those who get it with their Microsoft account by November 11. Local notes need no app account.</p>
         </div>
         <div class="hero-media">
           <figure class="capture-preview demo-carousel" data-demo-carousel data-play-label="Play demos" data-pause-label="Pause demos">
-          <div class="demo-stage"><img class="demo-image" data-demo-image src="/assets/demo-hotkey-poster.png?v=20261029a" width="320" height="200" alt="UnderdoggNote opens over a browser window"><span class="demo-hotkey-badge" data-demo-hotkey-badge aria-hidden="true"><kbd>Alt</kbd> + <kbd>A</kbd></span><button class="demo-toggle" type="button" data-demo-toggle data-state="playing" aria-label="Pause demos" hidden><svg class="icon-pause" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="3.5" y="2.5" width="3" height="11" rx="1"/><rect x="9.5" y="2.5" width="3" height="11" rx="1"/></svg><svg class="icon-play" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4.5 2.9v10.2a.8.8 0 0 0 1.2.7l8-5.1a.8.8 0 0 0 0-1.4l-8-5.1a.8.8 0 0 0-1.2.7z"/></svg></button></div>
+          <div class="demo-stage"><img class="demo-image" data-demo-image src="/assets/demo-hotkey-poster.png?v=20261029a" width="320" height="200" alt="UnderdoggNote opening over a browser window"><span class="demo-hotkey-badge" data-demo-hotkey-badge aria-hidden="true"><kbd>Alt</kbd> + <kbd>A</kbd></span><button class="demo-toggle" type="button" data-demo-toggle data-state="playing" aria-label="Pause demos" hidden><svg class="icon-pause" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="3.5" y="2.5" width="3" height="11" rx="1"/><rect x="9.5" y="2.5" width="3" height="11" rx="1"/></svg><svg class="icon-play" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4.5 2.9v10.2a.8.8 0 0 0 1.2.7l8-5.1a.8.8 0 0 0 0-1.4l-8-5.1a.8.8 0 0 0-1.2.7z"/></svg></button></div>
           <div class="demo-controls" data-demo-controls hidden>
-            <div class="demo-choices" role="group" aria-label="Choose a demonstration">
-              <button type="button" data-demo-choice data-duration="11000" data-animation="/assets/demo-hotkey.webp?v=20261029a" data-poster="/assets/demo-hotkey-poster.png?v=20261029a" data-alt="UnderdoggNote opens over a browser window" data-caption="Opens over any app and hides with the same shortcut" aria-pressed="true">Alt+A</button>
-              <button type="button" data-demo-choice data-duration="9500" data-animation="/assets/demo-note.webp?v=20261029a" data-poster="/assets/demo-note-poster.png?v=20261029a" data-alt="A note in the UnderdoggNote editor" data-caption="Start a line with - [ ] and it becomes a checklist item" aria-pressed="false">Note</button>
-              <button type="button" data-demo-choice data-duration="9875" data-animation="/assets/demo-math.webp?v=20261029a" data-poster="/assets/demo-math-poster.png?v=20261029a" data-alt="Calculations using variables in the UnderdoggNote editor" data-caption="Type math on the first line, the answer shows up after =" aria-pressed="false">Math</button>
-              <button type="button" data-demo-choice data-duration="9000" data-animation="/assets/demo-units.webp?v=20261029a" data-poster="/assets/demo-units-poster.png?v=20261029a" data-alt="Unit conversion in the UnderdoggNote editor" data-caption="Meters, miles, grams: convert with plain words and to" aria-pressed="false">Units</button>
-              <button type="button" data-demo-choice data-duration="7125" data-animation="/assets/demo-currency.webp?v=20261029a" data-poster="/assets/demo-currency-poster.png?v=20261029a" data-alt="Currency conversion in the editor" data-caption="Rates update when you're online" aria-pressed="false">Currency</button>
+            <div class="demo-choices" role="group" aria-label="Pick a demo">
+              <button type="button" data-demo-choice data-duration="11000" data-animation="/assets/demo-hotkey.webp?v=20261029a" data-poster="/assets/demo-hotkey-poster.png?v=20261029a" data-alt="UnderdoggNote opening over a browser window" data-caption="Opens over any app, hides with the same shortcut" aria-pressed="true">Alt+A</button>
+              <button type="button" data-demo-choice data-duration="9500" data-animation="/assets/demo-note.webp?v=20261029a" data-poster="/assets/demo-note-poster.png?v=20261029a" data-alt="A checklist in UnderdoggNote" data-caption="Start a line with - [ ] and it's a checklist item" aria-pressed="false">Note</button>
+              <button type="button" data-demo-choice data-duration="9875" data-animation="/assets/demo-math.webp?v=20261029a" data-poster="/assets/demo-math-poster.png?v=20261029a" data-alt="Working out a trip budget with variables" data-caption="Type math on the first line and answers show up after =" aria-pressed="false">Math</button>
+              <button type="button" data-demo-choice data-duration="9000" data-animation="/assets/demo-units.webp?v=20261029a" data-poster="/assets/demo-units-poster.png?v=20261029a" data-alt="Converting meters to centimeters" data-caption="Convert units right in the line: 2 meters to cm" aria-pressed="false">Units</button>
+              <button type="button" data-demo-choice data-duration="7125" data-animation="/assets/demo-currency.webp?v=20261029a" data-poster="/assets/demo-currency-poster.png?v=20261029a" data-alt="Converting dollars to euros" data-caption="Rates update on their own when you're online" aria-pressed="false">Currency</button>
             </div>
-            <button class="demo-resume" type="button" data-demo-resume hidden>Resume rotation</button>
+            <button class="demo-resume" type="button" data-demo-resume hidden>Play all</button>
           </div>
-            <figcaption class="demo-caption" data-demo-caption aria-live="polite">Opens over any app and hides with the same shortcut</figcaption>
+            <figcaption class="demo-caption" data-demo-caption aria-live="polite">Opens over any app, hides with the same shortcut</figcaption>
           </figure>
-          <aside class="dog-note" aria-label="A note from the dog"><img src="/assets/dog-head.webp" alt="" width="36" height="36"><p>Alt+A and I'm here. Again, and I'm gone.</p></aside>
+          <aside class="dog-note" aria-label="A note from the dog"><img src="/assets/dog-head.webp" alt="" width="36" height="36"><p>You call, I come running. You're done, I'm gone.</p></aside>
         </div>
       </section>
 
       <section class="more" aria-labelledby="more-title">
-        <h2 id="more-title">Three more things</h2>
+        <h2 id="more-title">And also</h2>
         <div class="more-list">
-          <article><h3>The keepers go to Obsidian</h3><p>Pick your vault, the folder Obsidian keeps notes in, and send what matters there as Markdown. Anything else you can save as <code>.md</code> or <code>.txt</code>.</p></article>
-          <article><h3>Sync through your own Google Drive</h3><p>Turn it on in Settings. Your notes live in your account, not on my server. I don't have one.</p><aside class="dog-note" aria-label="A note from the dog"><img src="/assets/dog-head.webp" alt="" width="36" height="36"><p>I keep notes in my own folder on Google Drive. I don't poke around elsewhere.</p></aside></article>
-          <article><h3>No sign-up</h3><p>For notes on one device you don't need an account or a Google sign-in. Install it and start typing.</p></article>
+          <article><h3>The keepers go to Obsidian</h3><p>Send a note worth keeping to your Obsidian vault as a plain Markdown file, or save it as <code>.md</code> or <code>.txt</code> anywhere you like.</p></article>
+          <article><h3>Sync through your own Google Drive</h3><p>Turn it on in Settings. Your notes live in your Google Drive. I don't run a server.</p><aside class="dog-note" aria-label="A note from the dog"><img src="/assets/dog-head.webp" alt="" width="36" height="36"><p>I keep notes in my own folder and my nose out of yours.</p></aside></article>
+          <article><h3>No sign-up</h3><p>For local notes, you don't need an app account or a Google sign-in. Install it and start typing.</p></article>
         </div>
       </section>
 
       <section class="platform-section" id="platforms" aria-labelledby="platform-title">
         <div class="section-heading"><h2 id="platform-title">Platforms</h2></div>
         <div class="platform-grid">
-          <article class="platform-card platform-available"><span class="platform-status"><span class="status-light" aria-hidden="true"></span> Available</span><h3>Windows</h3><p>Available free from Microsoft Store. A one-time price and trial are planned from November 12.</p><a class="platform-link" href="https://apps.microsoft.com/detail/9N2R52B29SSF">Get it for Windows <span aria-hidden="true">↗</span></a></article>
-          <article class="platform-card"><span class="platform-status">In testing</span><h3>Android</h3><p>The Android version is in testing. There isn't a public download yet.</p><a class="platform-link" href="/support/#android-testing">Request to test <span aria-hidden="true">→</span></a></article>
+          <article class="platform-card platform-available"><span class="platform-status"><span class="status-light" aria-hidden="true"></span> Available</span><h3>Windows</h3><p>Free now in Microsoft Store. A one-time price and 7-day trial are planned from November 12.</p><a class="platform-link" href="https://apps.microsoft.com/detail/9N2R52B29SSF">Get it for Windows <span aria-hidden="true">↗</span></a></article>
+          <article class="platform-card"><span class="platform-status">In testing</span><h3>Android</h3><p>In testing. There's no public download yet.</p><a class="platform-link" href="/support/#android-testing">Ask about testing <span aria-hidden="true">→</span></a></article>
         </div>
-        <p class="platform-other">macOS: release in preparation. iPhone: no version yet.</p>
+        <p class="platform-other">Mac: getting it ready. iPhone: not yet.</p>
       </section>
 
       <section class="comparison" aria-labelledby="compare-title">
-        <div class="section-heading"><h2 id="compare-title">How it compares</h2><p>Scratchpads and knowledge bases serve different jobs.</p></div>
+        <div class="section-heading"><h2 id="compare-title">How it compares</h2><p>Antinote is Mac only, Keep has no built-in calculator, and Obsidian is built for a knowledge base.</p></div>
         <div class="compare-scroll" role="region" aria-label="App comparison" tabindex="0"><table class="compare-table">
-          <thead><tr><th scope="col">Feature</th><th scope="col">UnderdoggNote</th><th scope="col"><a href="https://antinote.io/">Antinote</a></th><th scope="col"><a href="https://keep.google.com/">Google Keep</a></th><th scope="col"><a href="https://obsidian.md/">Obsidian</a></th></tr></thead>
-          <tbody><tr><th scope="row">Best for</th><td>Scratch notes and calculations</td><td>Quick notes</td><td>Notes and lists</td><td>A knowledge base</td></tr><tr><th scope="row">Available on</th><td>Windows; Android in testing</td><td>macOS</td><td>Android, iPhone, web</td><td>Windows, macOS, Linux, Android, iPhone</td></tr><tr><th scope="row">Calculations in notes</th><td>Yes</td><td>Yes</td><td>No built-in calculator</td><td><a href="https://community.obsidian.md/plugins/numerals">Via plugins</a></td></tr><tr><th scope="row">App price</th><td>Free now; planned from Nov 12: $5 once in the US and a 7-day trial</td><td>$5 one-time</td><td>Free</td><td>Free; Sync paid separately</td></tr><tr><th scope="row">Sync</th><td>Google Drive; no end-to-end encryption</td><td>iCloud on Apple devices; encrypted on device</td><td>Google account</td><td>Obsidian Sync or other options</td></tr></tbody>
+          <thead><tr><th scope="col"><span class="visually-hidden">What we compare</span></th><th scope="col">UnderdoggNote</th><th scope="col"><a href="https://antinote.io/">Antinote</a></th><th scope="col"><a href="https://keep.google.com/">Google Keep</a></th><th scope="col"><a href="https://obsidian.md/">Obsidian</a></th></tr></thead>
+          <tbody><tr><th scope="row">Best for</th><td>Scratch notes and calculations</td><td>Quick notes</td><td>Notes and lists</td><td>A knowledge base</td></tr><tr><th scope="row">Runs on</th><td>Windows; Android in testing</td><td>macOS</td><td>Android, iPhone, web</td><td>Windows, macOS, Linux, Android, iPhone</td></tr><tr><th scope="row">Math in notes</th><td>Yes</td><td>Yes</td><td>No</td><td><a href="https://community.obsidian.md/plugins/numerals">Via plugins</a></td></tr><tr><th scope="row">Price</th><td>Free now; planned from Nov 12: $5 once in the US and a 7-day trial</td><td>$5 once</td><td>Free</td><td>Free; Obsidian Sync is paid separately</td></tr><tr><th scope="row">Sync</th><td>Your Google Drive, no end-to-end encryption</td><td>iCloud, Apple devices only, encrypted</td><td>Your Google account</td><td>Obsidian Sync or your own setup</td></tr></tbody>
         </table></div>
       <aside class="dog-note" aria-label="A note from the dog"><img src="/assets/dog-head.webp" alt="" width="36" height="36"><p>Mac folks have Antinote. Everyone else has me.</p></aside>
       </section>
 
       <section class="story" aria-labelledby="story-title">
         <div class="story__copy">
-          <h2 id="story-title">The ideas behind UnderdoggNote</h2>
-          <p>UnderdoggNote is an independent project built on ideas from apps I admire. Note modes triggered by keywords draw on <a href="https://antinote.io/">Antinote</a>; the math is inspired by <a href="https://numi.app/">Numi</a> and <a href="https://soulver.app/">Soulver</a>.</p><p>Thanks to their creators.</p>
+          <h2 id="story-title">Where the ideas come from</h2>
+          <p>I'm building UnderdoggNote on my own. The keyword-on-the-first-line idea comes from <a href="https://antinote.io/">Antinote</a>, and the math from <a href="https://numi.app/">Numi</a> and <a href="https://soulver.app/">Soulver</a>. Some of the code comes from noted, an open-source project by khurram bhutto.</p><p>Thanks to all of them.</p>
         </div>
         <figure class="story__art">
           <img src="/assets/app-icon.png" width="200" height="200" alt="A dog in green sunglasses, the UnderdoggNote mascot">
-          <figcaption>"An underdog is the one nobody bets on. Suits me."</figcaption>
+          <figcaption>"An underdog is the one nobody bets on. I'm used to it."</figcaption>
         </figure>
       </section>
 
       <section class="faq" aria-labelledby="faq-title"><div class="section-heading"><h2 id="faq-title">Questions and answers</h2></div><div class="faq-grid">
-        <article class="faq-item"><h3>How much does it cost?</h3><p>The Windows app is free now. I plan to introduce a one-time price of $5 in the US and a 7-day trial from November 12, 2026; local prices will appear in Microsoft Store. I plan to keep access and updates free for people who get it with their Microsoft account by November 11. Local notes need no app account, and syncing through your Google Drive needs no separate subscription.</p></article>
-        <article class="faq-item"><h3>What can the app see in Google Drive?</h3><p>Only data it creates in its hidden Drive app-data folder; it doesn't request access to your other files. Sync is not end-to-end encrypted. See the <a href="/privacy/">privacy policy</a>.</p></article>
-        <article class="faq-item"><h3>Does the app collect data?</h3><p>The app does not automatically send note contents or diagnostic logs to the developer. The <a href="/privacy/">privacy policy</a> explains the connected services and their data handling.</p></article>
-        <article class="faq-item"><h3>Does it work offline?</h3><p>Local notes and ordinary calculations work offline. Sync and fresh exchange rates need an internet connection; cached rates can be out of date.</p></article>
-        <article class="faq-item"><h3>Can I change Alt+A?</h3><p>Yes. You can change the show/hide shortcut in Settings.</p></article>
-        <article class="faq-item"><h3>Will there be an iPhone version?</h3><p>There isn't one yet. If you'd like one, <a href="mailto:und3rd099@gmail.com?subject=UnderdoggNote%20for%20iPhone">send me an email</a>.</p></article>
+        <article class="faq-item"><h3>How much does it cost?</h3><p>The Windows app is free now. I plan to introduce a one-time price of $5 in the US and a 7-day trial from November 12, 2026; local prices will appear in Microsoft Store. I plan to keep access and updates free for those who get it with their Microsoft account by November 11. Sync through your Google Drive needs no separate app subscription.</p></article>
+        <article class="faq-item"><h3>What can the app see in Google Drive?</h3><p>Only its own hidden folder. It can't see your other Drive files, your Gmail or your photos. Sync isn't end-to-end encrypted; the <a href="/privacy/">privacy policy</a> has the details.</p></article>
+        <article class="faq-item"><h3>Does the app collect data?</h3><p>The app doesn't automatically send me note text or logs. Google, Microsoft and the currency-rate service have their own rules; the <a href="/privacy/">privacy policy</a> lists them.</p></article>
+        <article class="faq-item"><h3>Does it work offline?</h3><p>Local notes and ordinary calculations work offline. Sync and fresh exchange rates need a connection; a saved rate, if available, may be out of date.</p></article>
+        <article class="faq-item"><h3>Can I change Alt+A?</h3><p>Yes, in Settings.</p></article>
+        <article class="faq-item"><h3>Will there be an iPhone version?</h3><p>Not yet. If you want one, <a href="mailto:und3rd099@gmail.com?subject=UnderdoggNote%20for%20iPhone">email me</a>. I'm counting.</p></article>
       </div></section>
 
       <section class="closing" aria-labelledby="closing-title">
         <div class="closing-copy">
           <h2 id="closing-title">Get UnderdoggNote</h2>
-          <p>Get it free from Microsoft Store. A one-time price and trial are planned from November&nbsp;12.</p>
+          <p>Get it free from Microsoft Store. A one-time price and trial are planned from November 12.</p>
           <div class="closing-actions">
             <button class="button button-primary send-to-pc" type="button" data-send-to-pc data-url="https://apps.microsoft.com/detail/9N2R52B29SSF" data-copied="Link copied" hidden>Send the link to my PC</button>
             <a class="button button-primary" href="https://apps.microsoft.com/detail/9N2R52B29SSF" aria-label="Get it for Windows from Microsoft Store"><span class="store-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>Get it for Windows</span><span aria-hidden="true">↗</span></a>
           </div>
         </div>
-        <aside class="dog-note" aria-label="A note from the dog"><img src="/assets/dog-head.webp" alt="" width="36" height="36"><p>I'll be waiting on Alt+A.</p></aside>
+        <aside class="dog-note" aria-label="A note from the dog"><img src="/assets/dog-head.webp" alt="" width="36" height="36"><p>If you need me, I'm on Alt+A.</p></aside>
       </section>
 
       <section class="feedback" id="try-it" aria-label="Feedback">
-        <p>Found a bug or missing something? Email me at <a href="mailto:und3rd099@gmail.com">und3rd099@gmail.com</a>. <a class="text-link" href="/support/#feedback">Send feedback <span aria-hidden="true">→</span></a></p>
+        <p>Found a bug or missing something? Email me at <a href="mailto:und3rd099@gmail.com">und3rd099@gmail.com</a>. I read everything myself. <a class="text-link" href="/support/#feedback">How to send feedback <span aria-hidden="true">→</span></a></p>
       </section>
     </main>
     <footer><span>Made by underdogg and one dog in sunglasses · © 2026</span><nav aria-label="Footer navigation"><a href="/privacy/">Privacy policy</a><a href="/support/">Support &amp; feedback</a><a href="/license/">License</a></nav></footer>
