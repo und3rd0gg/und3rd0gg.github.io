@@ -7,6 +7,7 @@
   const toggle = carousel.querySelector('[data-demo-toggle]');
   const resume = carousel.querySelector('[data-demo-resume]');
   const choices = Array.from(carousel.querySelectorAll('[data-demo-choice]'));
+  const caption = carousel.querySelector('[data-demo-caption]');
   if (!image || !hotkeyBadge || !controls || !toggle || !resume || !choices.length) return;
 
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -40,10 +41,11 @@
     const choice = choices[selected];
     hotkeyBadge.hidden = selected !== 0;
     choices.forEach((button, index) => button.setAttribute('aria-pressed', String(index === selected)));
-    toggle.textContent = playing ? carousel.dataset.pauseText : carousel.dataset.playText;
+    toggle.dataset.state = playing ? 'playing' : 'paused';
     toggle.setAttribute('aria-label', playing ? carousel.dataset.pauseLabel : carousel.dataset.playLabel);
     resume.hidden = !playing || rotate;
     image.alt = choice.dataset.alt;
+    if (caption) caption.textContent = choice.dataset.caption || '';
     const animate = playing && !document.hidden;
     const src = animate ? choice.dataset.animation : choice.dataset.poster;
     image.onload = () => {
