@@ -5,7 +5,7 @@
   <meta name="google-site-verification" content="uG63MBSxGQwTPkxmJz1bmK2OAJdUuikm_iAh-QsIST8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>UnderdoggNote — a hotkey scratchpad for Windows</title>
-  <meta name="description" content="A scratchpad that pops up over any Windows app with Alt+A. It does math as you type, syncs through your own Google Drive and sends notes to Obsidian.">
+  <meta name="description" content="A Windows scratchpad on Alt+A. Calculate as you type, sync App notes through your Google Drive, or work with Markdown files in your Obsidian vault.">
   <link rel="canonical" href="https://underdogg-note.github.io/">
   <link rel="alternate" hreflang="en" href="https://underdogg-note.github.io/">
   <link rel="alternate" hreflang="ru" href="https://underdogg-note.github.io/ru/">
@@ -13,7 +13,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://underdogg-note.github.io/">
   <meta property="og:title" content="UnderdoggNote — a scratchpad for everything in between">
-  <meta property="og:description" content="Press Alt+A and a scratchpad pops up over any app. It does math as you type.">
+  <meta property="og:description" content="Press Alt+A to open your Windows scratchpad. Calculate as you type.">
   <meta property="og:image" content="https://underdogg-note.github.io/assets/social-preview-real.png">
   <meta property="og:image:alt" content="UnderdoggNote, its dog mascot and a close-up of calculations in the editor">
   <meta name="twitter:card" content="summary_large_image">
@@ -37,8 +37,8 @@
       <section class="hero" aria-labelledby="hero-title">
         <h1 id="hero-title">Notes between tasks</h1>
         <div class="hero-copy">
-          <p class="lead">Press <span class="key-chord"><kbd>Alt</kbd> + <kbd>A</kbd></span> in any Windows app and a scratchpad pops up. Jot down a thought, work out a trip budget, get back to work.</p>
-          <p class="hero-sublead">Sync goes through your own Google Drive. No subscription.</p>
+          <p class="lead">Open your Windows scratchpad with <span class="key-chord"><kbd>Alt</kbd> + <kbd>A</kbd></span>. Jot down a thought or work out a trip budget.</p>
+          <p class="hero-sublead">Optional Google Drive sync for App notes. No subscription.</p>
           <div class="hero-actions">
             <button class="button button-primary send-to-pc" type="button" data-send-to-pc data-url="https://apps.microsoft.com/detail/9N2R52B29SSF" data-copied="Link copied" hidden>Send the link to my PC</button>
             <a class="button button-primary" href="https://apps.microsoft.com/detail/9N2R52B29SSF" aria-label="Get it for Windows from Microsoft Store"><span class="store-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>Get it for Windows</span><span aria-hidden="true">↗</span></a>
@@ -51,7 +51,7 @@
           <div class="demo-stage"><img class="demo-image" data-demo-image src="/assets/demo-hotkey-poster.png?v=20261030a" width="320" height="200" alt="UnderdoggNote opening over a browser window"><span class="demo-hotkey-badge" data-demo-hotkey-badge aria-hidden="true"><kbd>Alt</kbd> + <kbd>A</kbd></span><button class="demo-toggle" type="button" data-demo-toggle data-state="playing" aria-label="Pause demos" hidden><svg class="icon-pause" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="3.5" y="2.5" width="3" height="11" rx="1"/><rect x="9.5" y="2.5" width="3" height="11" rx="1"/></svg><svg class="icon-play" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4.5 2.9v10.2a.8.8 0 0 0 1.2.7l8-5.1a.8.8 0 0 0 0-1.4l-8-5.1a.8.8 0 0 0-1.2.7z"/></svg></button></div>
           <div class="demo-controls" data-demo-controls hidden>
             <div class="demo-choices" role="group" aria-label="Pick a demo">
-              <button type="button" data-demo-choice data-duration="11000" data-animation="/assets/demo-hotkey.webp?v=20261030a" data-poster="/assets/demo-hotkey-poster.png?v=20261030a" data-alt="UnderdoggNote opening over a browser window" data-caption="Opens over any app, hides with the same shortcut" aria-pressed="true">Alt+A</button>
+              <button type="button" data-demo-choice data-duration="11000" data-animation="/assets/demo-hotkey.webp?v=20261030a" data-poster="/assets/demo-hotkey-poster.png?v=20261030a" data-alt="UnderdoggNote opening over a browser window" data-caption="Alt+A opens and hides the scratchpad" aria-pressed="true">Alt+A</button>
               <button type="button" data-demo-choice data-duration="9500" data-animation="/assets/demo-note.webp?v=20261030a" data-poster="/assets/demo-note-poster.png?v=20261030a" data-alt="A checklist in UnderdoggNote" data-caption="Start a line with - [ ] and it's a checklist item" aria-pressed="false">Note</button>
               <button type="button" data-demo-choice data-duration="9875" data-animation="/assets/demo-math.webp?v=20261030a" data-poster="/assets/demo-math-poster.png?v=20261030a" data-alt="Working out a trip budget with variables" data-caption="Type math on the first line and answers show up after =" aria-pressed="false">Math</button>
               <button type="button" data-demo-choice data-duration="9000" data-animation="/assets/demo-units.webp?v=20261030a" data-poster="/assets/demo-units-poster.png?v=20261030a" data-alt="Converting meters to centimeters" data-caption="Convert units right in the line: 2 meters to cm" aria-pressed="false">Units</button>
@@ -59,7 +59,7 @@
             </div>
             <button class="demo-resume" type="button" data-demo-resume hidden>Play all</button>
           </div>
-            <figcaption class="demo-caption" data-demo-caption aria-live="polite">Opens over any app, hides with the same shortcut</figcaption>
+            <figcaption class="demo-caption" data-demo-caption aria-live="polite">Alt+A opens and hides the scratchpad</figcaption>
           </figure>
           <aside class="dog-note" aria-label="Tip"><img src="/assets/dog-head.webp" alt="" width="36" height="36"><p>Ideas rarely arrive on schedule. Keep a scratchpad nearby.</p></aside>
         </div>
@@ -70,8 +70,9 @@
         <div class="more__body">
           <h2 id="more-title">Working with your notes</h2>
           <div class="more-list">
-          <article><h3>Save to Obsidian</h3><p>Send an important note to your Obsidian vault as a plain Markdown file, or save it as <code>.md</code> or <code>.txt</code> anywhere you like.</p></article>
-          <article><h3>Sync through your own Google Drive</h3><p>Turn it on in Settings. Your notes live in your Google Drive. I don't run a server.</p><aside class="dog-note" aria-label="Tip"><img src="/assets/dog-head.webp" alt="" width="36" height="36"><p>A separate folder for your notes. The rest of your Drive stays untouched.</p></aside></article>
+          <article><h3>App notes or vault files</h3><p><code>App</code> keeps notes inside the application. <code>Vault</code> opens Markdown files in your selected Obsidian vault.</p></article>
+          <article><h3>Copy or move a note</h3><p>In <code>App</code>, open <code>Export</code> and choose Obsidian, <code>.md</code> or <code>.txt</code>. <code>Copy</code> keeps the App note; <code>Move</code> removes it after the file is saved and verified.</p></article>
+          <article><h3>Sync App notes through your own Google Drive</h3><p>Turn it on in Settings. App notes also stay on your device. Vault files use your vault’s own sync.</p><aside class="dog-note" aria-label="Tip"><img src="/assets/dog-head.webp" alt="" width="36" height="36"><p>A separate folder for your notes. The rest of your Drive stays untouched.</p></aside></article>
           <article><h3>No sign-up</h3><p>For local notes, you don't need an app account or a Google sign-in. Install it and start typing.</p></article>
         </div>
         </div>
@@ -90,7 +91,7 @@
         <div class="section-heading"><h2 id="compare-title">How it compares</h2><p>Antinote is Mac only, Keep has no built-in calculator, and Obsidian is built for a knowledge base.</p></div>
         <div class="compare-scroll" role="region" aria-label="App comparison" tabindex="0"><table class="compare-table">
           <thead><tr><th scope="col"><span class="visually-hidden">What we compare</span></th><th scope="col">UnderdoggNote</th><th scope="col">Antinote</th><th scope="col">Google Keep</th><th scope="col">Obsidian</th></tr></thead>
-          <tbody><tr><th scope="row">Best for</th><td data-label="UnderdoggNote">Scratch notes and calculations</td><td data-label="Antinote">Quick notes</td><td data-label="Google Keep">Notes and lists</td><td data-label="Obsidian">A knowledge base</td></tr><tr><th scope="row">Runs on</th><td data-label="UnderdoggNote">Windows; Android in testing</td><td data-label="Antinote">macOS</td><td data-label="Google Keep">Android, iPhone, web</td><td data-label="Obsidian">Windows, macOS, Linux, Android, iPhone</td></tr><tr><th scope="row">Math in notes</th><td data-label="UnderdoggNote">Yes</td><td data-label="Antinote">Yes</td><td data-label="Google Keep">No</td><td data-label="Obsidian"><a href="https://community.obsidian.md/plugins/numerals">Via plugins</a></td></tr><tr><th scope="row">Price</th><td data-label="UnderdoggNote">Free through Nov 11. From Nov 12: $5 once in the US</td><td data-label="Antinote">$5 once</td><td data-label="Google Keep">Free</td><td data-label="Obsidian">Free; Obsidian Sync is paid separately</td></tr><tr><th scope="row">Sync</th><td data-label="UnderdoggNote">Your Google Drive, no end-to-end encryption</td><td data-label="Antinote">iCloud, Apple devices only, encrypted</td><td data-label="Google Keep">Your Google account</td><td data-label="Obsidian">Obsidian Sync or your own setup</td></tr></tbody>
+          <tbody><tr><th scope="row">Best for</th><td data-label="UnderdoggNote">Scratch notes and calculations</td><td data-label="Antinote">Quick notes</td><td data-label="Google Keep">Notes and lists</td><td data-label="Obsidian">A knowledge base</td></tr><tr><th scope="row">Runs on</th><td data-label="UnderdoggNote">Windows; Android in testing</td><td data-label="Antinote">macOS</td><td data-label="Google Keep">Android, iPhone, web</td><td data-label="Obsidian">Windows, macOS, Linux, Android, iPhone</td></tr><tr><th scope="row">Math in notes</th><td data-label="UnderdoggNote">Yes</td><td data-label="Antinote">Yes</td><td data-label="Google Keep">No</td><td data-label="Obsidian"><a href="https://community.obsidian.md/plugins/numerals">Via plugins</a></td></tr><tr><th scope="row">Price</th><td data-label="UnderdoggNote">Free through Nov 11. From Nov 12: $5 once in the US</td><td data-label="Antinote">$5 once</td><td data-label="Google Keep">Free</td><td data-label="Obsidian">Free; Obsidian Sync is paid separately</td></tr><tr><th scope="row">Sync</th><td data-label="UnderdoggNote">App notes: your Google Drive, no end-to-end encryption</td><td data-label="Antinote">iCloud, Apple devices only, encrypted</td><td data-label="Google Keep">Your Google account</td><td data-label="Obsidian">Obsidian Sync or your own setup</td></tr></tbody>
         </table></div>
         <p class="comparison-sources">App websites: <a href="https://antinote.io/">Antinote</a> · <a href="https://keep.google.com/">Google Keep</a> · <a href="https://obsidian.md/">Obsidian</a></p>
       <aside class="dog-note" aria-label="Tip"><img src="/assets/dog-head.webp" alt="" width="36" height="36"><p>Different tools suit different tasks. This one is for quick notes and calculations.</p></aside>
